@@ -478,91 +478,81 @@
 
         <form class="modal-form">
           <div class="modal-field">
-            <label class="modal-label" for="user-name">Name </label>
+            <label class="modal-label" for="user-name">Name</label>
             <div class="modal-input-wrap">
-              <input type="text" name="user-name" class="modal-input" />
-              <svg class="modal-icon" width="18" height="18">
+              <input
+                type="text"
+                name="user-name"
+                id="user-name"
+                class="modal-input"
+              />
+              <svg class="modal-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-user-input"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="user-phone">Phone</label>
+            <div class="modal-input-wrap">
+              <input
+                type="tel"
+                name="user-phone"
+                class="modal-input"
+                id="user-phone"
+              />
+              <svg class="modal-icon" width="18" height="24">
+                <use href="./images/icons.svg#icon-phone-input"></use>
               </svg>
             </div>
           </div>
           <div class="modal-field">
             <label class="modal-label" for="user-email">Email</label>
             <div class="modal-input-wrap">
-              <input type="email" name="user-email" class="modal-input" />
-              <svg class="modal-icon" width="18" height="18">
+              <input
+                type="email"
+                name="user-email"
+                id="user-email"
+                class="modal-input"
+              />
+              <svg class="modal-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email-input"></use>
               </svg>
             </div>
           </div>
-          <div class="modal-field">
-            <label class="modal-label" for="user-phone">Phone number </label>
-            <div class="modal-input-wrap">
-              <input
-                type="tel"
-                name="user-phone"
-                class="modal-input"
-                required
-              />
-              <svg class="modal-icon" width="18" height="18">
-                <use href="./images/icons.svg#icon-phone-input"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="modal-field">
-            <label for="user-text" class="modal-label">Comment</label>
+          <div class="modal-textarea">
+            <label for="user-comment" class="modal-label">Comment</label>
             <textarea
-              name="user-text"
-              id="user-text"
-              class="modal-textarea"
-              placeholder="Enter text"
+              name="user-comment"
+              id="user-comment"
+              class="modal-textarea-text"
+              placeholder="Text input"
             ></textarea>
           </div>
-          <button type="submit">Send</button>
+          <div class="modal-checkbox">
+            <input
+              type="checkbox"
+              class="modal-checkbox-input visually-hidden"
+              id="user-privacy"
+              value="true"
+              name="user-privacy"
+            />
+            <label for="user-privacy" class="modal-checkbox-label"
+              >I accept the terms and conditions of the
+              <a href="" class="modal-checkbox-policy">Privacy Policy</a>
+              <span class="modal-checkbox-click"
+                ><svg class="icon-checkbox-active" width="10" height="8">
+                  <use
+                    href="./images/icons.svg#icon-checkbox-active"
+                  ></use></svg></span
+            ></label>
+          </div>
+          <button class="modal-btn-send" type="submit">Send</button>
         </form>
       </div>
     </div>
-    <!-- <div class="modal-wrapper">
-      <form action="" class="modal-order">
-       
-        <label class="modal-order-label" for=""
-          >Name<input
-            class="modal-order-input"
-            type="text"
-            name=""
-            id=""
-            autofocus /></label
-        ><label class="modal-order-label" for=""
-          >Phone<input
-            class="modal-order-input"
-            type="text"
-            name=""
-            id="" /></label
-        ><label class="modal-order-label" for=""
-          >Email<input
-            class="modal-order-input"
-            type="email"
-            name=""
-            id="" /></label
-        ><label class="modal-order-label" for=""
-          >Comment
-          <textarea
-            class="modal-order-input"
-            name=""
-            id=""
-            rows="10"
-            placeholder="Text input"
-          ></textarea>
-        </label>
-        <button class="modal-order-button">Send</button>
-      </form>
-    </div> -->
   </body>
 </html>
 <!-- for footer send ico
 <svg class="footer-send">
   <use href="./images/icons.svg#icon-ico-send"></use>
 </svg> -->
-<svg class="modal-input-ico"><use href="#icon-user-input"></use></svg>
-<svg class="modal-input-ico"><use href="#icon-email-input"></use></svg>
-<svg class="modal-input-ico"><use href="#icon-phone-input"></use></svg>

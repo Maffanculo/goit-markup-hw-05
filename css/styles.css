@@ -479,6 +479,8 @@ ol {
   width: 100%;
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -493,14 +495,33 @@ ol {
 .modal-btn-close {
   width: 24px;
   height: 24px;
-  display: block;
-  margin: 0 0 24px auto;
+  /* display: block;
+  margin: 0 0 24px auto; */
+  position: absolute;
   border-radius: 50%;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .modal-icon-close {
   background-color: transparent;
   border: 1px solid #e7e9fc;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -512,7 +533,10 @@ ol {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-title {
@@ -533,18 +557,19 @@ ol {
 }
 /* modal label text style
   color: #8e8f99;
-  font-size: 12px;
+  
   font-weight: 400;
-  line-height: 1.17;
-  letter-spacing: 0.04em; */
+  line-height: 1.17; */
 .modal-field {
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .modal-label {
-  display: block;
-  font-style: 12px;
-  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  margin-bottom: 4px;
 }
 
 .modal-input-wrap {
@@ -558,8 +583,9 @@ ol {
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding-left: 38px;
   font-style: 16px;
-  color: green;
-  transition-duration: 300ms;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -577,25 +603,88 @@ ol {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  transition-duration: 300ms;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea {
+  margin-bottom: 16px;
+}
+
+.modal-textarea-text {
   width: 100%;
-  height: 336px;
-  border: 1.5px solid rgba(17, 17, 17, 0.05);
-  border-radius: 13px;
-  padding: 22px 24px;
-  font-style: 16px;
-  color: green;
-  transition-duration: 300ms;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  padding: 8px 16px;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   resize: none;
 }
 
-.modal-textarea::placeholder {
+.modal-textarea-text:focus {
+  border-color: #4d5ae5;
+}
+
+.modal-textarea-text::placeholder {
   color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
+}
+.modal-checkbox {
+  margin-bottom: 24px;
+}
+
+.modal-checkbox-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.modal-checkbox-click {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  fill: transparent;
+}
+
+/* for input checked */
+
+.modal-checkbox-policy {
+  color: #4d5ae5;
+}
+
+.modal-btn-send {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  cursor: pointer;
+  background-color: #4d5ae5;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn-send:hover,
+.modal-btn-send:focus {
+  fill: #ffffff;
 }
