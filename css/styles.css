@@ -652,7 +652,7 @@ ol {
   margin-bottom: 24px;
 }
 
-.modal-checkbox-input:focus + .modal-checkbox-label svg {
+.modal-checkbox-input:focus + .modal-checkbox-label .icon-checkbox-active {
   fill: #4d5ae5;
 }
 
