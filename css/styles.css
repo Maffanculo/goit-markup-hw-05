@@ -604,7 +604,7 @@ ol {
   border: 1px solid #4d5ae5;
 }
 
-.modal-input:focus + .modal-icon {
+.modal-input:focus + .modal-checkbox-click {
   fill: #4d5ae5;
 }
 
@@ -652,7 +652,7 @@ ol {
   margin-bottom: 24px;
 }
 
-.modal-checkbox-input:checked + .modal-checkbox-click {
+.modal-checkbox-input:checked + .modal-checkbox-label span {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
@@ -677,12 +677,14 @@ ol {
   justify-content: center;
   align-items: center;
   fill: transparent;
+  margin-right: 8px;
 }
 
 /* for input checked */
 
 .modal-checkbox-policy {
   color: #4d5ae5;
+  text-decoration: underline;
 }
 
 .modal-btn-send {
