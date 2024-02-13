@@ -496,6 +496,7 @@ ol {
   line-height: 150%;
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin-bottom: 16px;
 }
 
 .footer-subscr-label {
@@ -506,6 +507,7 @@ ol {
   font-size: 12px;
   line-height: 200%;
   letter-spacing: 0.04em;
+  color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 4px;
   width: 264px;
