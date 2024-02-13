@@ -486,55 +486,60 @@ ol {
 }
 
 .footer-subscr-form {
-}
-
-.footer-subscr-label {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: 0.02em;
-  color: white;
-}
-
-.footer-subscr-wrapper {
-  margin-top: 16px;
   display: flex;
   gap: 24px;
 }
 
-.footer-subscr-input {
-  border: 1px solid white;
-  border-radius: 4px;
-  width: 264px;
-  height: 40px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  padding: 8 16px;
-  background-color: transparent;
+.footer-subscr-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 
-.footer-subscr-input::placeholder {
+.footer-subscr-label {
+}
+
+.footer-subscr-input {
   font-weight: 400;
   font-size: 12px;
   line-height: 200%;
   letter-spacing: 0.04em;
-  color: white;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  padding-left: 16px;
+  background-color: transparent;
+}
+
+.footer-subscr-input::placeholder {
+  color: #ffffff;
 }
 
 .footer-subscr-btn {
+  min-width: 165px;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.04em;
-  text-align: center;
-  color: white;
+  color: #ffffff;
   border-radius: 4px;
   background-color: #4d5ae5;
   padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   border: none;
 }
 
 .footer-subscr-btn-ico {
-  fill: white;
+  fill: #ffffff;
   margin-left: 16px;
 }
 
